@@ -1,7 +1,7 @@
 package top.suanwj.designmode.strategy;
 
 /**
- * 策略模式 Strategy
+ * Strategy 策略模式
  * @author suanwj
  *
  */

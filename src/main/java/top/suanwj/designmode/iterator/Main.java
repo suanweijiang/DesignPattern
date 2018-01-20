@@ -1,5 +1,10 @@
 package top.suanwj.designmode.iterator;
 
+/**
+ * Iterator 迭代器
+ * @author suanwj
+ *
+ */
 public class Main {
 
 	public static void main(String[] args) {
