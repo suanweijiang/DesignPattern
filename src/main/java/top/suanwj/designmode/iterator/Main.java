@@ -3,12 +3,27 @@ package top.suanwj.designmode.iterator;
 public class Main {
 
 	public static void main(String[] args) {
-		ArrayList al = new ArrayList();
-		
-		for (int i = 0; i < 15; i++) {
-			al.add(new Cat(i));
+		Collection ca = new ArrayList();
+		for (int i = 0; i < 3; i++) {
+			ca.add(new Cat(i));
 		}
-		System.out.println(al.size());
+		Iterator ita = ca.iterator();
+		while (ita.hasNext()) {
+			System.out.println(ita.next());
+		}
+		System.out.println(ca.size());
+		
+		Collection cl = new LinkedList();
+		
+		for (int i = 0; i < 5; i++) {
+			cl.add(new Cat(i));
+		}
+		
+		Iterator itl = cl.iterator();
+		while (itl.hasNext()) {
+			System.out.println(itl.next());
+		}
+		System.out.println(cl.size());
 	}
 	
 }

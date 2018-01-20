@@ -1,6 +1,6 @@
 package top.suanwj.designmode.iterator;
 
-public class ArrayList {
+public class ArrayList implements Collection {
 
 	private Object[] objects = new Object[10];
 	private final int INCREMENT = 10;
@@ -13,11 +13,36 @@ public class ArrayList {
 			objects = newObjects;
 		}
 		objects[index] = obj;
-		index ++;
+		index++;
 	}
-	
+
 	public int size() {
 		return index;
 	}
 
+	public Object get(int index) {
+		return objects[index];
+	}
+
+	public Iterator iterator() {
+		return new ArrayIterator();
+	}
+
+	private class ArrayIterator implements Iterator {
+
+		private int currentIndex = 0;
+
+		public Object next() {
+
+			// if(currentIndex > index - 1) return null;
+
+			return objects[currentIndex++];
+		}
+
+		public boolean hasNext() {
+
+			return currentIndex < index;
+		}
+
+	}
 }
